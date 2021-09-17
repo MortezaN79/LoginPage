@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-family: 'Pacifico', cursive;
+}
+label , h3 ,h6 , span , a {
+    color: #cccccc;
+}
+button {
+    display: inline-block;
+    width: 20rem;
+    border-radius: 20px;
+    background-color: grey;
+    text-transform: none;
+    border: 0.1rem solid grey;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template:  1fr /1fr 1fr;
+    grid-template-areas: "login-image login-form";
+}
+@media (max-width: 500px) {
+
+    .container {
+        margin-top: 5rem;
+        grid-template: 1fr / 1fr;
+        grid-template-areas: "login-form";
+    }
+    .image , .image-text{
+        display: none;
+    }
+
+}
+.image {
+    grid-area: login-image;
+    background-image: url("../imgs/img.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.image-text{
+    width: 30vw;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: white;
+}
+
+.login-form {
+    grid-area: login-form;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 3rem;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 0;
+}
+.forget-pass{
+    float: right;
+    color: grey;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.google-btn {
+    color: black;
+    background-color: white;
+}
+.underline{
+    text-decoration-line: underline;
+}
+.margin{
+    margin-bottom: 5rem;
+}
+.or:before ,.or:after {
+    content: "";
+    display: inline-block;
+    width: 6rem;
+    height: 0.1rem;
+    border-top: solid 1px #ccc;
+}
